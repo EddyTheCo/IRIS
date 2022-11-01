@@ -319,7 +319,7 @@ namespace custom_models{
 		}
 		torch::data::Example<> IRIS::get(size_t index)
 		{
-			return torch::data::Example(images_[index],targets_[index]);
+			return {images_[index],targets_[index]};
 		}
 		c10::optional<size_t> IRIS::size() const
 		{
